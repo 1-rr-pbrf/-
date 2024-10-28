@@ -1,0 +1,58 @@
+/* 基本的なページスタイル */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* 見出し */
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+/* サイトリンクのスタイル */
+.site-group {
+  margin-bottom: 30px;
+}
+
+.site-group h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.site-group h3 a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.site-group h3 a:hover {
+  text-decoration: underline;
+}
+
+/* サイト内リンクのスタイル */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #555;
+}
+
+ul li a:hover {
+  color: #007bff;
+}
