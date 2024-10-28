@@ -9,9 +9,9 @@
   </head>
 
   <body>
-    工事中～～～～～！！！！！！！！！
+    ------工事中------
     <header>
-      <h1>ゆーふれリンク集</h1>
+      <h1>リンク</h1>
     </header>
 
     <main>
@@ -21,11 +21,23 @@
       <div class="site-group">
         <h3><a href="https://www.ufret.jp/artist.php?data=%E6%A4%8E%E5%90%8D%E6%9E%97%E6%AA%8E" target="_blank">椎名林檎</a>
         </h3>
-        <ul id="shiina-ringo-links">
+        <ul id="sheena-ringo-links">
           <li><a href="https://www.ufret.jp/song.php?data=40099" target="_blank">おいしい季節</a></li>
           <li><a href="https://www.ufret.jp/song.php?data=53978" target="_blank">あの世の門</a></li>
           <li><a href="https://www.ufret.jp/song.php?data=60094" target="_blank">カプチーノ</a></li>
           <li><a href="https://www.ufret.jp/song.php?data=1939" target="_blank">ありあまる富</a></li>
+          <li><a href="https://www.ufret.jp/song.php?data=10763" target="_blank">Σ</a></li>
+        </ul>
+      </div>
+      <!-- 東京事変の曲リンク -->
+      <div class="site-group">
+        <h3><a href="https://www.ufret.jp/artist.php?data=%E6%9D%B1%E4%BA%AC%E4%BA%8B%E5%A4%89" target="_blank">東京事変</a>
+        </h3>
+        <ul id="IncidentsTokyo-links">
+          <li><a href="https://www.ufret.jp/song.php?data=10080" target="_blank">ミラーボール</a></li>
+          <li><a href="https://www.ufret.jp/song.php?data=7453" target="_blank">ランプ</a></li>
+          <li><a href="https://www.ufret.jp/song.php?data=10966" target="_blank">サービス
+          <li><a href="https://www.ufret.jp/song.php?data=7454" target="_blank">林檎の唄</a></li>
         </ul>
       </div>
     </main>
@@ -37,20 +49,32 @@
     <!-- JavaScriptで五十音順ソートを実装 -->
     <script>
       // ソート対象の椎名林檎のリンクリストを取得
-      const shiinaRingoLinks = document.querySelectorAll("#shiina-ringo-links li");
+      const sheenaRingoLinks = document.querySelectorAll("#sheena-ringo-links li");
 
       // リンクリストを配列に変換し、テキストの五十音順でソート
-      const sortedLinks = Array.from(shiinaRingoLinks).sort((a, b) => {
+      const sortedLinks = Array.from(sheenaRingoLinks).sort((a, b) => {
         const textA = a.textContent.trim();
         const textB = b.textContent.trim();
         return textA.localeCompare(textB, 'ja');
       });
 
       // ソートされたリンクをHTMLに再度挿入
-      const shiinaRingoList = document.getElementById("shiina-ringo-links");
-      shiinaRingoList.innerHTML = '';  // 元の内容をクリア
+      const sheenaRingoList = document.getElementById("sheena-ringo-links");
+      sheenaRingoList.innerHTML = '';  // 元の内容をクリア
       sortedLinks.forEach(link => {
-        shiinaRingoList.appendChild(link);  // ソートされたリンクを追加
+        sheenaRingoList.appendChild(link);  // ソートされたリンクを追加
+      });
+      // 東京事変のリンクを五十音順に並べる
+      const IncidentsTokyoLinks = document.querySelectorAll("#IncidentsTokyo-links li");
+      const sortedJihenLinks = Array.from(IncidentsTokyoLinks).sort((a, b) => {
+        const textA = a.textContent.trim();
+        const textB = b.textContent.trim();
+        return textA.localeCompare(textB, 'ja');
+      });
+      const IncidentsTokyoList = document.getElementById("IncidentsTokyo-links");
+      IncidentsTokyoList.innerHTML = '';  // 元の内容をクリア
+      sortedJihenLinks.forEach(link => {
+        IncidentsTokyoList.appendChild(link);  // ソートされたリンクを追加
       });
     </script>
   </body>
