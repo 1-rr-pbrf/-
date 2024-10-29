@@ -57,3 +57,27 @@ ul li a {
 ul li a:hover {
   color: #007bff;
 }
+
+/* アーティストナビゲーションのスタイル */
+#artist-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  font-size: 0.9em;
+  /* 通常の文字サイズより小さめに設定 */
+  text-align:left;
+}
+
+#artist-nav ul li {
+  display:block;
+  margin-right: 10px;
+}
+
+#artist-nav ul li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+#artist-nav ul li a:hover {
+  text-decoration: underline;
+}
